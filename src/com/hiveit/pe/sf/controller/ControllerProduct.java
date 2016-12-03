@@ -19,23 +19,22 @@ public class ControllerProduct implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		String rptaUpdate = null;
+		String rptaServicio = null;
 		try {
 
 			if(e.getSource() == viewProduct.btnUpdate){
 				if(validarcampos()==true){															
 					
-					rptaUpdate = modelProduct.modelProduct(viewProduct.txtReferenceOld.getText(), viewProduct.txtReferenceNew.getText());
+					rptaServicio = modelProduct.modelProduct(viewProduct.txtReferenceOld.getText(), viewProduct.txtReferenceNew.getText());
 					 					
-					if(rptaUpdate != null){
-						JOptionPane.showMessageDialog(null, rptaUpdate);
-					}else{
-						JOptionPane.showMessageDialog(null, "No se pudo actualizar el producto");
-					}	
+					if(rptaServicio != null){
+						JOptionPane.showMessageDialog(null, rptaServicio);
+					}
 				}
 			}					
-		} catch (Exception ex) {		
-			JOptionPane.showMessageDialog(null, "Error BD: " + rptaUpdate);
+		} catch (Exception ex) {	
+			rptaServicio = "Error Inesperado: " + ex.getMessage();
+			JOptionPane.showMessageDialog(null,rptaServicio);
 		}
 		limpiarCasillas();
 	    viewProduct.txtReferenceOld.requestFocus();
