@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="lib/poi-3.13-beta1-20150723.jar"/>
 	<classpathentry kind="lib" path="lib/poi-3.9-20121203.jar"/>
 	<classpathentry kind="lib" path="lib/ProductService.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.23-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
