@@ -13,7 +13,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 
 public class JFProductUpdate extends JFrame {
-
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	public JTextField txtReferenceOld;
 	public JButton btnUpdate;

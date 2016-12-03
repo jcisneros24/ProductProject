@@ -47,7 +47,7 @@ public class ControllerProduct implements ActionListener {
     private boolean validarcampos(){
     	boolean flag=true;
     	if(viewProduct.txtReferenceOld.getText().equals("") || viewProduct.txtReferenceNew.getText().equals("")){
-    		JOptionPane.showMessageDialog(null, "Error en el flujo: " + "Ingresar valor en los campos");
+    		JOptionPane.showMessageDialog(null, "Error en el aplicativo: " + "Ingresar valor en los campos");
     		viewProduct.txtReferenceOld.requestFocus();
     		flag=false;
     	}
