@@ -5,14 +5,12 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-import com.hiveit.pe.eai.productservice.service.ProductServiceImpl;
 import com.hiveit.pe.sf.model.ModelProduct;
 import com.hiveit.pe.sf.view.JFProductUpdate;
 
 public class ControllerProduct implements ActionListener {
 	JFProductUpdate viewProduct = new JFProductUpdate();
 	ModelProduct modelProduct = new ModelProduct();
-	ProductServiceImpl request = new ProductServiceImpl();
 	
 	public ControllerProduct(JFProductUpdate viewProduct, ModelProduct modelProduct){
 		this.viewProduct = viewProduct;
@@ -26,8 +24,8 @@ public class ControllerProduct implements ActionListener {
 
 			if(e.getSource() == viewProduct.btnUpdate){
 				if(validarcampos()==true){															
-										
-					rptaUpdate = modelProduct.getModelProduct().actualizarCodigo(viewProduct.txtReferenceOld.getText(), viewProduct.txtReferenceNew.getText());
+					
+					rptaUpdate = modelProduct.modelProduct(viewProduct.txtReferenceOld.getText(), viewProduct.txtReferenceNew.getText());
 					 					
 					if(rptaUpdate != null){
 						JOptionPane.showMessageDialog(null, rptaUpdate);
